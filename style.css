@@ -6,6 +6,16 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
 /*
 
 HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER
@@ -73,6 +83,7 @@ main {
     gap: 3vh;
     width: 100%;
     height: auto;
+    flex-grow: 1;
 }
 
 /*
@@ -85,6 +96,7 @@ footer {
     background-color: #2c2c2c;
     padding:  2vh 4vw;
     display: flex;
+    align-content: end;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -123,6 +135,7 @@ footer {
     font-size: larger;
     font-weight: 700;
     color: #facb04 !important;
+    margin-right: 1.5vw;
 }
 
 .social-icons {
@@ -152,6 +165,8 @@ footer {
     flex-direction: row;
     align-items: center;
     width: 100%;
+    height: 50vh;
+    background-color: red;
 }
 
 #left-side {
@@ -162,31 +177,37 @@ footer {
 }
 
 #left-side img {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 
 #right-side {
-    flex: 0 0 70%;
+    flex: 0 0 65%;
     padding: 6vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
-#right-side img {
-    width: 450px;
-    height: auto;
-}
-
-.content {
+#concept{
     flex: 1;
     display: flex;
     align-items: center;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
+    padding: 3vh;
+    text-align: center;
+    font-weight: 900;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
     padding: 3vh;
     text-align: center;
     font-weight: 900;
@@ -205,7 +226,6 @@ footer {
     font-size: 2em;
     font-weight: bold;
     padding-bottom: 20px;
-    color: #042A2B;
 }
 
 .pokemon {
@@ -229,24 +249,29 @@ footer {
 /*BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO*/
 
 #biography {
+    flex: 1;
     display: flex;
     max-width: 1200px;
     gap: 30px;
     background-color: #fff;
-    padding: 25.5px;
+    padding: 4vh 5vw;
     border-radius: 10px;
-    align-items: flex-start;
-}
-
-#biography img {
-    max-width: 300px;
-    border-radius: 10px;
-    object-fit: cover;
 }
 
 #biography h1 {
     font-size: 3em;
     margin-bottom: 10px;
+}
+
+#biography img {
+    width: 330px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#right-self{
+
 }
 
 #biography p {
