@@ -95,4 +95,18 @@
     body{
         max-width: 620px;
     }
+    .Rbutton{
+        display: none;
+    }
+    #bot {
+        grid-template-columns: repeat(1, 250px);
+        grid-gap: 0px;
+    }
+    #subheader{
+        grid-column: span 1; 
+        margin-left: -55px;
+    }
+    .footer-right{
+        display: none;
+    }
 }
