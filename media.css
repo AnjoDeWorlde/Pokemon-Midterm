@@ -1,4 +1,4 @@
-@media (max-width: 1920px){
+@media (max-width: 2000px){
     #bot {
         grid-gap: 90px;
     }
@@ -28,7 +28,7 @@
 
 @media (max-width: 1400px){
     #top{
-        height: 55vh;
+        height: 70vh;
     }
     #concept{
         font-size: 3.3em;
@@ -57,11 +57,42 @@
     #subheader{
         grid-column: span 3; 
     }
+    #biography{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1060px){
     #top{
         flex-direction: column;
-        height: 100vh;
+        height: 130vh;
+        padding: 5vw;
+    }
+    #right-side{
+        flex: 0 0 52%;
+    }
+}
+
+@media (max-width: 955px){
+    #hamburger {
+        display: flex;
+    }
+    #h-navlinks {
+        display: none;
+    }
+    #bot {
+        grid-template-columns: repeat(2, 250px);
+        grid-gap: 20px;
+    }
+    #subheader{
+        grid-column: span 2; 
+    }
+}
+
+@media (max-width: 620px){
+    body{
+        max-width: 620px;
     }
 }
