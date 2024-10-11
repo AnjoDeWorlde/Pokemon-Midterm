@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 1550px){
+@media (max-width: 1582px){
     #right-side{
         flex: 0 0 60%;
         padding: 5vh;
@@ -26,7 +26,7 @@
     }
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1490px){
     #top{
         height: 70vh;
     }
@@ -62,6 +62,9 @@
         align-items: center;
         justify-content: center;
     }
+    #left-self{
+        text-align: center;
+    }
 }
 
 @media (max-width: 1060px){
@@ -76,11 +79,20 @@
 }
 
 @media (max-width: 955px){
+    #top{
+        height: 100vh;
+    }
     #hamburger {
         display: flex;
     }
     #h-navlinks {
         display: none;
+    }
+    #concept{
+        font-size: 3em;
+    }
+    #content{
+        font-size: 1.05em;
     }
     #bot {
         grid-template-columns: repeat(2, 250px);
@@ -92,21 +104,87 @@
 }
 
 @media (max-width: 620px){
-    body{
-        max-width: 620px;
-    }
     .Rbutton{
         display: none;
     }
+    #right-side{
+        padding: 2vh;
+    }
+    #concept{
+        font-size: 2em;
+    }
+    #content{
+        font-size: 0.93em;
+    }
     #bot {
+        padding: 2vh 2vw;
         grid-template-columns: repeat(1, 250px);
-        grid-gap: 0px;
+        grid-gap: 2vh;
     }
     #subheader{
         grid-column: span 1; 
-        margin-left: -55px;
+        font-size: 50px;
     }
     .footer-right{
         display: none;
+    }
+}
+
+@media (max-width: 410px){
+    #top{
+        height: 55vh;
+    }
+    
+    #left-side{
+        padding: 1.5vh;
+    }
+
+    #left-side img {
+        width: 175px;
+        height: 175px;
+    }
+    
+    #right-side {
+        padding: 0.9vh;
+    }
+    
+    #concept{
+        font-size: 1.4em;
+        padding: 0.8vh;
+    }
+    
+    #content {
+        font-size: 0.70em;
+        padding: 0.8vh;
+    }
+    
+    #bot {
+        padding: 2vh 2vw;
+        grid-template-columns: repeat(2, 125px);
+        grid-gap: 2vh;
+    }
+    
+    #subheader{
+        grid-column: span 2; 
+        font-size: 25px;
+    }
+    
+    .pokemon {
+        width: 125px;
+        height: 125px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 280px){
+    #logo img {
+        height: 4vh;
+    }
+    .footer-left h2 {
+        font-size: smaller;
+    }
+    
+    .footer-left p {
+        font-size: 0.5em;
     }
 }
