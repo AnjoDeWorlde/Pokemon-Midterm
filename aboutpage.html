@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poke Home</title>
+    <title>Pokemon's Origins</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css">
     <link href="pictures/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
@@ -18,14 +17,262 @@
         <nav id="h-navlinks">
             <a href="homepage.html">Home</a>
             <a href="aboutpage.html">About</a>
-            <a href="https://www.pokemon.com/us/pokedex">Services</a>
+            <a href="https://www.pokemon.com/us/pokedex">Original Website</a>
         </nav>
         <div id="hamburger">
             <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 16 16"><path fill="none" stroke="#facb04" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"/></svg>    
         </div>
-        <button class="Rbutton">RANDOMIZE</button>
+        <button class="Rbutton" id="randomize-btn">RANDOMIZE</button>
     </header>
     <main>
+        <div id="top">
+            <div id="left-side">
+                <img src="pictures/pokeball.png" alt="Pokeball Picture">
+            </div>
+            <div id="right-side">
+                <span id="concept">What are Pokemons?</span>
+                <div id="content">
+                    <p>Pokémon (or Pocket Monsters) are fictional creatures that inhabit the fictional Pokémon World. The designs for the multitude of species can draw inspiration from anything, such as animals, plants, and legendary creatures.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Pokemon Types Section -->
+        <section class="info-section">
+            <h2 class="section-title">Pokémon Types</h2>
+            <div class="types-grid">
+                <div class="type-card" data-type="normal">
+                    <img src="pictures/types/normal.png" alt="Normal Type Icon" class="type-icon">
+                    <h3 class="type-name">Normal</h3>
+                    <p>Balanced, versatile, few strengths but few weaknesses.</p>
+                </div>
+                <div class="type-card" data-type="fire">
+                    <img src="pictures/types/fire.png" alt="Fire Type Icon" class="type-icon">
+                    <h3 class="type-name">Fire</h3>
+                    <p>Strong against Grass, Bug, Ice, and Steel; often powerful attackers.</p>
+                </div>
+                <div class="type-card" data-type="water">
+                    <img src="pictures/types/water.png" alt="Water Type Icon" class="type-icon">
+                    <h3 class="type-name">Water</h3>
+                    <p>Balanced and common; effective against Fire, Rock, and Ground.</p>
+                </div>
+                <div class="type-card" data-type="grass">
+                    <img src="pictures/types/grass.png" alt="Grass Type Icon" class="type-icon">
+                    <h3 class="type-name">Grass</h3>
+                    <p>Good against Water, Rock, and Ground; often status-inducing.</p>
+                </div>
+                <div class="type-card" data-type="electric">
+                    <img src="pictures/types/electric.png" alt="Electric Type Icon" class="type-icon">
+                    <h3 class="type-name">Electric</h3>
+                    <p>Fast and strong against Water and Flying.</p>
+                </div>
+                <div class="type-card" data-type="ice">
+                    <img src="pictures/types/ice.png" alt="Ice Type Icon" class="type-icon">
+                    <h3 class="type-name">Ice</h3>
+                    <p>Strong vs. Flying, Ground, Grass, Dragon; often fragile but hard-hitting.</p>
+                </div>
+                <div class="type-card" data-type="fighting">
+                    <img src="pictures/types/fighting.png" alt="Fighting Type Icon" class="type-icon">
+                    <h3 class="type-name">Fighting</h3>
+                    <p>Strong vs. Normal, Dark, Rock, Steel, Ice; physical powerhouses.</p>
+                </div>
+                <div class="type-card" data-type="poison">
+                    <img src="pictures/types/poison.png" alt="Poison Type Icon" class="type-icon">
+                    <h3 class="type-name">Poison</h3>
+                    <p>Strong against Grass and Fairy; often status specialists.</p>
+                </div>
+                <div class="type-card" data-type="ground">
+                    <img src="pictures/types/ground.png" alt="Ground Type Icon" class="type-icon">
+                    <h3 class="type-name">Ground</h3>
+                    <p>Effective against Fire, Electric, Poison, Rock, Steel.</p>
+                </div>
+                <div class="type-card" data-type="flying">
+                    <img src="pictures/types/flying.png" alt="Flying Type Icon" class="type-icon">
+                    <h3 class="type-name">Flying</h3>
+                    <p>Good against Grass, Bug, Fighting; often fast and evasive.</p>
+                </div>
+                <div class="type-card" data-type="psychic">
+                    <img src="pictures/types/psychic.png" alt="Psychic Type Icon" class="type-icon">
+                    <h3 class="type-name">Psychic</h3>
+                    <p>Strong against Fighting and Poison; often special attackers.</p>
+                </div>
+                <div class="type-card" data-type="bug">
+                    <img src="pictures/types/bug.png" alt="Bug Type Icon" class="type-icon">
+                    <h3 class="type-name">Bug</h3>
+                    <p>Strong against Psychic, Grass, Dark; usually underdogs but strategic.</p>
+                </div>
+                <div class="type-card" data-type="rock">
+                    <img src="pictures/types/rock.png" alt="Rock Type Icon" class="type-icon">
+                    <h3 class="type-name">Rock</h3>
+                    <p>Good vs. Flying, Fire, Bug, Ice; defensively tough.</p>
+                </div>
+                <div class="type-card" data-type="ghost">
+                    <img src="pictures/types/ghost.png" alt="Ghost Type Icon" class="type-icon">
+                    <h3 class="type-name">Ghost</h3>
+                    <p>Immune to Normal & Fighting; great against Psychic & Ghost.</p>
+                </div>
+                <div class="type-card" data-type="dragon">
+                    <img src="pictures/types/dragon.png" alt="Dragon Type Icon" class="type-icon">
+                    <h3 class="type-name">Dragon</h3>
+                    <p>Strong and legendary; weak mainly to Fairy, Ice, and Dragon.</p>
+                </div>
+                <div class="type-card" data-type="dark">
+                    <img src="pictures/types/dark.png" alt="Dark Type Icon" class="type-icon">
+                    <h3 class="type-name">Dark</h3>
+                    <p>Great vs. Psychic & Ghost; tricksters with sneaky tactics.</p>
+                </div>
+                <div class="type-card" data-type="steel">
+                    <img src="pictures/types/steel.png" alt="Steel Type Icon" class="type-icon">
+                    <h3 class="type-name">Steel</h3>
+                    <p>Excellent defenses; strong against Ice, Rock, Fairy.</p>
+                </div>
+                <div class="type-card" data-type="fairy">
+                    <img src="pictures/types/fairy.png" alt="Fairy Type Icon" class="type-icon">
+                    <h3 class="type-name">Fairy</h3>
+                    <p>Introduced in Gen 6; strong against Dragon, Dark, Fighting.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Famous Trainers Section -->
+        <section class="info-section">
+            <h2 class="section-title">Famous Trainers & Their Lines</h2>
+            <div class="trainers-container">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/AshKetchum.png" alt="Ash Ketchum">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Ash Ketchum</h3>
+                        <p class="trainer-title">Anime Protagonist</p>
+                        <p class="trainer-quote">"I choose you!" (when sending out a Pokémon)</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/ProfessorOak.png" alt="Professor Oak">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Professor Oak</h3>
+                        <p class="trainer-title">Games/Anime</p>
+                        <p class="trainer-quote">"There's a time and place for everything, but not now."</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/GaryOak.png" alt="Gary Oak">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Gary Oak</h3>
+                        <p class="trainer-title">Anime/Games Rival</p>
+                        <p class="trainer-quote">"Smell ya later!"</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/Red.png" alt="Red">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Red</h3>
+                        <p class="trainer-title">Games Protagonist</p>
+                        <p class="trainer-quote">Silent protagonist; famous for his final battle in Mt. Silver.</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/Cynthia.png" alt="Cynthia">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Cynthia</h3>
+                        <p class="trainer-title">Champion, Sinnoh</p>
+                        <p class="trainer-quote">"That was an excellent battle!" (known for her Garchomp)</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/StevenStone.png" alt="Steven Stone">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Steven Stone</h3>
+                        <p class="trainer-title">Champion, Hoenn</p>
+                        <p class="trainer-quote">"I'll show you the true power of steel."</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/N.png" alt="N">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">N</h3>
+                        <p class="trainer-title">Team Plasma King, Unova</p>
+                        <p class="trainer-quote">"Pokémon are not tools of war."</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/Giovanni.png" alt="Giovanni">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Giovanni</h3>
+                        <p class="trainer-title">Team Rocket Boss</p>
+                        <p class="trainer-quote">"So! I must say, I am impressed you got here."</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="pictures/trainers/JessieJames.png" alt="Team Rocket">
+                    </div>
+                    <div class="trainer-content">
+                        <h3 class="trainer-name">Team Rocket</h3>
+                        <p class="trainer-title">Jessie & James, Anime</p>
+                        <p class="trainer-quote">"Prepare for trouble, and make it double!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pokedex Section -->
+        <section class="info-section">
+            <h2 class="section-title">Different Kinds of Pokédex</h2>
+            <div class="pokedex-list">
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Kanto Pokédex</h3>
+                    <p>The first Pokédex, recording the original 151 Pokémon.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Johto Pokédex</h3>
+                    <p>Expanded with new evolutions and forms from Gen 2.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Hoenn Pokédex</h3>
+                    <p>Features region-specific species, later split into Normal/National Dex.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Sinnoh Pokédex</h3>
+                    <p>Introduced evolutions for many older Pokémon.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Unova Pokédex</h3>
+                    <p>Initially only Unova Pokémon; later expanded to National Dex.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Kalos Pokédex</h3>
+                    <p>Divided into Central, Coastal, and Mountain Dexes.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Alola Pokédex</h3>
+                    <p>Includes regional "Alolan forms" of classic Pokémon.</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Galar Pokédex</h3>
+                    <p>Focuses on regional Pokémon and "Galarian forms."</p>
+                </div>
+                <div class="pokedex-item">
+                    <h3 class="pokedex-name">Paldea Pokédex</h3>
+                    <p>Latest, includes regional forms and Terastal phenomenon entries.</p>
+                </div>
+            </div>
+        </section>
         <div id="biography">
             <div id="left-self">
                 <h1>Satoshi Tajiri</h1>
@@ -53,18 +300,129 @@
     <footer>
         <div class="footer-container"></div>
             <div class="footer-left">
-                <h2>Midterms Examination</h2>
-                <p>&copy; 2024 WS301. All Rights Reserved.</p>
+                <h2>Anjo's Pokemon</h2>
+                <p>&copy; 2025: RA 8293: Intellectual Property Code of the Philippines</p>
             </div>
             <div class="footer-right">
-                <h3>Follow Us</h3>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/Pokemon" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#facb04" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"/></svg></a>
                     <a href="https://x.com/Pokemon?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="26.25" height="30" viewBox="0 0 448 512"><path fill="#facb04" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6L379.4 396h-95.6L209 298.1L123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5l78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z"/></svg></a>
-                    <a href="https://www.instagram.com/pokemon/?hl=en" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24"><path fill="#facb04" d="M12 9.52A2.48 2.48 0 1 0 14.48 12A2.48 2.48 0 0 0 12 9.52m9.93-2.45a6.5 6.5 0 0 0-.42-2.26a4 4 0 0 0-2.32-2.32a6.5 6.5 0 0 0-2.26-.42C15.64 2 15.26 2 12 2s-3.64 0-4.93.07a6.5 6.5 0 0 0-2.26.42a4 4 0 0 0-2.32 2.32a6.5 6.5 0 0 0-.42 2.26C2 8.36 2 8.74 2 12s0 3.64.07 4.93a6.9 6.9 0 0 0 .42 2.27a3.9 3.9 0 0 0 .91 1.4a3.9 3.9 0 0 0 1.41.91a6.5 6.5 0 0 0 2.26.42C8.36 22 8.74 22 12 22s3.64 0 4.93-.07a6.5 6.5 0 0 0 2.26-.42a3.9 3.9 0 0 0 1.41-.91a3.9 3.9 0 0 0 .91-1.4a6.6 6.6 0 0 0 .42-2.27C22 15.64 22 15.26 22 12s0-3.64-.07-4.93m-2.54 8a5.7 5.7 0 0 1-.39 1.8A3.86 3.86 0 0 1 16.87 19a5.7 5.7 0 0 1-1.81.35H8.94A5.7 5.7 0 0 1 7.13 19a3.5 3.5 0 0 1-1.31-.86A3.5 3.5 0 0 1 5 16.87a5.5 5.5 0 0 1-.34-1.81V8.94A5.5 5.5 0 0 1 5 7.13a3.5 3.5 0 0 1 .86-1.31A3.6 3.6 0 0 1 7.13 5a5.7 5.7 0 0 1 1.81-.35h6.12a5.7 5.7 0 0 1 1.81.35a3.5 3.5 0 0 1 1.31.86A3.5 3.5 0 0 1 19 7.13a5.7 5.7 0 0 1 .35 1.81V12c0 2.06.07 2.27.04 3.06Zm-1.6-7.44a2.38 2.38 0 0 0-1.41-1.41A4 4 0 0 0 15 6H9a4 4 0 0 0-1.38.26a2.38 2.38 0 0 0-1.41 1.36A4.3 4.3 0 0 0 6 9v6a4.3 4.3 0 0 0 .26 1.38a2.38 2.38 0 0 0 1.41 1.41a4.3 4.3 0 0 0 1.33.26h6a4 4 0 0 0 1.38-.26a2.38 2.38 0 0 0 1.41-1.41a4 4 0 0 0 .26-1.38V9a3.8 3.8 0 0 0-.26-1.38ZM12 15.82A3.81 3.81 0 0 1 8.19 12A3.82 3.82 0 1 1 12 15.82m4-6.89a.9.9 0 0 1 0-1.79a.9.9 0 0 1 0 1.79"/></svg></a>
-                </div>
+                    <a href="https://www.instagram.com/pokemon/?hl=en" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24"><path fill="#facb04" d="M12 9.52A2.48 2.48 0 1 0 14.48 12A2.48 2.48 0 0 0 12 9.52m9.93-2.45a6.5 6.5 0 0 0-.42-2.26a4 4 0 0 0-2.32-2.32a6.5 6.5 0 0 0-2.26-.42C15.64 2 15.26 2 12 2s-3.64 0-4.93.07a6.5 6.5 0 0 0-2.26.42a4 4 0 0 0-2.32 2.32a6.5 6.5 0 0 0-.42 2.26C2 8.36 2 8.74 2 12s0 3.64.07 4.93a6.9 6.9 0 0 0 .42 2.27a3.9 3.9 0 0 0 .91 1.4a3.9 3.9 0 0 0 1.41.91a6.5 6.5 0 0 0 2.26.42C8.36 22 8.74 22 12 22s3.64 0 4.93-.07a6.5 6.5 0 0 0 2.26-.42a3.9 3.9 0 0 0 1.41-.91a3.9 3.9 0 0 0 .91-1.4a6.6 6.6 0 0 0 .42-2.27C22 15.64 22 15.26 22 12s0-3.64-.07-4.93m-2.54 8a5.7 5.7 0 0 1-.39 1.8A3.86 3.86 0 0 1 16.87 19a5.7 5.7 0 0 1-1.81.35H8.94A5.7 5.7 0 0 1 7.13 19a3.5 3.5 0 0 1-1.31-.86A3.5 3.5 0 0 1 5 16.87a5.5 5.5 0 0 1-.34-1.81V8.94A5.5 5.5 0 0 1 5 7.13a3.5 3.5 0 0 1 .86-1.31A3.6 3.6 0 0 1 7.13 5a5.7 5.7 0 0 1 1.81-.35h6.12a5.7 5.7 0 0 1 1.81.35a3.5 3.5 0 0 1 1.31.86A3.5 3.5 0 0 1 19 7.13a5.7 5.7 0 0 1 .35 1.81V12c0 2.06.07 2.27.04 3.06Zm-1.6-7.44a2.38 2.38 0 0 0-1.41-1.41A4 4 0 0 0 15 6H9a4 4 0 0 0-1.38.26a2.38 2.38 0 0 0-1.41 1.36A4.3 4.3 0 0 0 6 9v6a4.3 4.3 0 0 0 .26 1.38a2.38 2.38 0 0 0 1.41 1.41a4.3 4.3 0 0 0 1.33.26h6a4 4 0 0 0 1.38-.26a2.38 2.38 0 0 0 1.41-1.41a4 4 0 0 0 .26-1.38V9a3.8 3.8 0 0 0-.26-1.38ZM12 15.82A3.81 3.81 0 0 1 8.19 12A3.82 3.82 0 1 1 12 15.82m4-6.89a.9.9 0 0 1 0-1.79a.9.9 0 0 1 0 1.79"/></svg></a>                </div>
             </div>
         </div>
     </footer>
+    <div id="modal-overlay" class="modal-overlay"></div>
+    <div id="trainer-card-modal" class="modal-overlay">
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="" alt="Trainer Image" id="modal-trainer-image">
+            </div>
+            <div class="trainer-content">
+                <h3 class="trainer-name" id="modal-trainer-name"></h3>
+                <p class="trainer-title" id="modal-trainer-title"></p>
+                <p class="trainer-quote" id="modal-trainer-quote"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for random content -->
+    <div id="random-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="random-type" class="type-card" style="display: none;">
+                <img id="random-type-icon" src="" alt="Type Icon" class="type-icon">
+                <h3 id="random-type-name" class="type-name"></h3>
+                <p id="random-type-description"></p>
+            </div>
+            <div id="random-trainer" class="trainer-card" style="display: none;">
+                <div class="trainer-image">
+                    <img id="random-trainer-image" src="" alt="Trainer Image">
+                </div>
+                <div class="trainer-content">
+                    <h3 id="random-trainer-name" class="trainer-name"></h3>
+                    <p id="random-trainer-title" class="trainer-title"></p>
+                    <p id="random-trainer-quote" class="trainer-quote"></p>
+                </div>
+            </div>
+            <div id="random-pokedex" class="pokedex-item" style="display: none;">
+                <h3 id="random-pokedex-name" class="pokedex-name"></h3>
+                <p id="random-pokedex-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const randomizeBtn = document.getElementById('randomize-btn');
+        const modal = document.getElementById('random-modal');
+
+        // Random type elements
+        const typeCards = Array.from(document.querySelectorAll('.type-card'));
+        const randomType = document.getElementById('random-type');
+        const randomTypeIcon = document.getElementById('random-type-icon');
+        const randomTypeName = document.getElementById('random-type-name');
+        const randomTypeDescription = document.getElementById('random-type-description');
+
+        // Random trainer elements
+        const trainerCards = Array.from(document.querySelectorAll('.trainer-card'));
+        const randomTrainer = document.getElementById('random-trainer');
+        const randomTrainerImage = document.getElementById('random-trainer-image');
+        const randomTrainerName = document.getElementById('random-trainer-name');
+        const randomTrainerTitle = document.getElementById('random-trainer-title');
+        const randomTrainerQuote = document.getElementById('random-trainer-quote');
+
+        // Random Pokédex elements
+        const pokedexItems = Array.from(document.querySelectorAll('.pokedex-item'));
+        const randomPokedex = document.getElementById('random-pokedex');
+        const randomPokedexName = document.getElementById('random-pokedex-name');
+        const randomPokedexDescription = document.getElementById('random-pokedex-description');
+
+        // Show a random type, trainer, or Pokédex entry
+        randomizeBtn.addEventListener('click', () => {
+            // Hide all modal sections
+            randomType.style.display = 'none';
+            randomTrainer.style.display = 'none';
+            randomPokedex.style.display = 'none';
+
+            // Randomly choose what to display
+            const randomCategory = Math.floor(Math.random() * 3); // 0: Type, 1: Trainer, 2: Pokédex
+
+            if (randomCategory === 0 && typeCards.length > 0) {
+                // Random type
+                const randomTypeCard = typeCards[Math.floor(Math.random() * typeCards.length)];
+                randomTypeIcon.src = randomTypeCard.querySelector('.type-icon').src;
+                randomTypeName.textContent = randomTypeCard.querySelector('.type-name').textContent;
+                randomTypeDescription.textContent = randomTypeCard.querySelector('p').textContent;
+
+                // Get the type from data attribute and apply styling
+                const type = randomTypeCard.getAttribute('data-type');  
+                randomType.setAttribute('type', type);
+
+                randomType.style.display = 'grid';
+            } else if (randomCategory === 1 && trainerCards.length > 0) {
+                // Random trainer
+                const randomTrainerCard = trainerCards[Math.floor(Math.random() * trainerCards.length)];
+                randomTrainerImage.src = randomTrainerCard.querySelector('.trainer-image img').src;
+                randomTrainerName.textContent = randomTrainerCard.querySelector('.trainer-name').textContent;
+                randomTrainerTitle.textContent = randomTrainerCard.querySelector('.trainer-title').textContent;
+                randomTrainerQuote.textContent = randomTrainerCard.querySelector('.trainer-quote').textContent;
+                randomTrainer.style.display = 'flex';   
+            } else if (pokedexItems.length > 0) {
+                // Random Pokédex
+                const randomPokedexItem = pokedexItems[Math.floor(Math.random() * pokedexItems.length)];
+                randomPokedexName.textContent = randomPokedexItem.querySelector('.pokedex-name').textContent;
+                randomPokedexDescription.textContent = randomPokedexItem.querySelector('p').textContent;
+                randomPokedex.style.display = 'block';
+            }
+
+            // Show the modal
+            modal.style.display = 'flex';
+        });
+
+        // Close the modal when clicking outside the content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
