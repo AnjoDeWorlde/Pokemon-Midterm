@@ -354,14 +354,12 @@
         const randomizeBtn = document.getElementById('randomize-btn');
         const modal = document.getElementById('random-modal');
 
-        // Random type elements
         const typeCards = Array.from(document.querySelectorAll('.type-card'));
         const randomType = document.getElementById('random-type');
         const randomTypeIcon = document.getElementById('random-type-icon');
         const randomTypeName = document.getElementById('random-type-name');
         const randomTypeDescription = document.getElementById('random-type-description');
 
-        // Random trainer elements
         const trainerCards = Array.from(document.querySelectorAll('.trainer-card'));
         const randomTrainer = document.getElementById('random-trainer');
         const randomTrainerImage = document.getElementById('random-trainer-image');
@@ -369,36 +367,30 @@
         const randomTrainerTitle = document.getElementById('random-trainer-title');
         const randomTrainerQuote = document.getElementById('random-trainer-quote');
 
-        // Random Pokédex elements
         const pokedexItems = Array.from(document.querySelectorAll('.pokedex-item'));
         const randomPokedex = document.getElementById('random-pokedex');
         const randomPokedexName = document.getElementById('random-pokedex-name');
         const randomPokedexDescription = document.getElementById('random-pokedex-description');
 
-        // Show a random type, trainer, or Pokédex entry
         randomizeBtn.addEventListener('click', () => {
-            // Hide all modal sections
             randomType.style.display = 'none';
             randomTrainer.style.display = 'none';
             randomPokedex.style.display = 'none';
 
             // Randomly choose what to display
-            const randomCategory = Math.floor(Math.random() * 3); // 0: Type, 1: Trainer, 2: Pokédex
+            const randomCategory = Math.floor(Math.random() * 3); 
 
             if (randomCategory === 0 && typeCards.length > 0) {
-                // Random type
                 const randomTypeCard = typeCards[Math.floor(Math.random() * typeCards.length)];
                 randomTypeIcon.src = randomTypeCard.querySelector('.type-icon').src;
                 randomTypeName.textContent = randomTypeCard.querySelector('.type-name').textContent;
                 randomTypeDescription.textContent = randomTypeCard.querySelector('p').textContent;
 
-                // Get the type from data attribute and apply styling
                 const type = randomTypeCard.getAttribute('data-type');  
                 randomType.setAttribute('type', type);
 
                 randomType.style.display = 'grid';
             } else if (randomCategory === 1 && trainerCards.length > 0) {
-                // Random trainer
                 const randomTrainerCard = trainerCards[Math.floor(Math.random() * trainerCards.length)];
                 randomTrainerImage.src = randomTrainerCard.querySelector('.trainer-image img').src;
                 randomTrainerName.textContent = randomTrainerCard.querySelector('.trainer-name').textContent;
@@ -406,18 +398,15 @@
                 randomTrainerQuote.textContent = randomTrainerCard.querySelector('.trainer-quote').textContent;
                 randomTrainer.style.display = 'flex';   
             } else if (pokedexItems.length > 0) {
-                // Random Pokédex
                 const randomPokedexItem = pokedexItems[Math.floor(Math.random() * pokedexItems.length)];
                 randomPokedexName.textContent = randomPokedexItem.querySelector('.pokedex-name').textContent;
                 randomPokedexDescription.textContent = randomPokedexItem.querySelector('p').textContent;
                 randomPokedex.style.display = 'block';
             }
 
-            // Show the modal
             modal.style.display = 'flex';
         });
 
-        // Close the modal when clicking outside the content
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
